@@ -1,0 +1,335 @@
+body {
+  background-color: #2c2e2e;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -200px;
+}
+
+.pacman {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 150px;
+  left: 150px;
+  fill: none;
+  stroke: #f4d146;
+  stroke-width: 50px;
+  stroke-linecap: butt;
+  stroke-dasharray: 157;
+  animation: mouth 0.7s ease-in-out infinite;
+}
+
+.eye {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 167px;
+  left: 204px;
+  fill: #2c2e2e;
+  animation: eye 0.7s ease-in-out infinite;
+}
+
+.dots {
+  position: absolute;
+  height: 14px;
+  width: 240px;
+  top: 193px;
+  left: 180px;
+  stroke: #f4d146;
+  stroke-width: 14px;
+  stroke-dasharray: 0px 50px;
+  stroke-linecap: round;
+  animation: points 0.7s linear infinite;
+  stroke-dashoffset: 14;
+}
+
+@keyframes mouth {
+  0%, 100% {
+    stroke-dashoffset: 0;
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  50% {
+    stroke-dashoffset: 40.5;
+    transform: rotate(45deg);
+  }
+}
+@keyframes eye {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-6px, -3px, 0);
+  }
+}
+@keyframes points {
+  0% {
+    stroke-dashoffset: 14;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    stroke-dashoffset: 64;
+  }
+}
+.pixel-art {
+  background-color: #7964d4;
+}
+
+.pixel-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10em;
+  height: 7em;
+}
+
+.pixelized--invaders {
+  animation: clignote 2s linear infinite;
+  display: block;
+  width: 1em;
+  height: 1em;
+  box-shadow: 2em 0em #303841, 8em 0em #303841, 3em 1em #303841, 7em 1em #303841, 2em 2em #303841, 3em 2em #303841, 4em 2em #303841, 5em 2em #303841, 6em 2em #303841, 7em 2em #303841, 8em 2em #303841, 1em 3em #303841, 2em 3em #303841, 4em 3em #303841, 5em 3em #303841, 6em 3em #303841, 8em 3em #303841, 9em 3em #303841, 0em 4em #303841, 1em 4em #303841, 2em 4em #303841, 3em 4em #303841, 4em 4em #303841, 5em 4em #303841, 6em 4em #303841, 7em 4em #303841, 8em 4em #303841, 9em 4em #303841, 10em 4em #303841, 0em 5em #303841, 2em 5em #303841, 3em 5em #303841, 4em 5em #303841, 5em 5em #303841, 6em 5em #303841, 7em 5em #303841, 8em 5em #303841, 10em 5em #303841, 0em 6em #303841, 2em 6em #303841, 8em 6em #303841, 10em 6em #303841, 3em 7em #303841, 4em 7em #303841, 6em 7em #303841, 7em 7em #303841;
+}
+
+@keyframes clignote {
+  50% {
+    opacity: 0;
+  }
+}
+.n3 {
+  background-color: #e47512;
+}
+
+.cube-n3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+}
+
+.center {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 100px;
+  left: 100px;
+  perspective: 1000px;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px) rotateX(70deg) rotateZ(-45deg);
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+.cube:hover {
+  transform: translateZ(-100px) rotateX(-120deg) rotateZ(135deg);
+}
+.cube .side {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+}
+.cube .front {
+  transform: rotateY(0deg) translateZ(100px);
+  background: #fff;
+}
+.cube .back {
+  transform: rotateX(180deg) translateZ(100px);
+  background: #ccc;
+}
+.cube .right {
+  transform: rotateY(90deg) translateZ(100px);
+  background: #ddd;
+}
+.cube .left {
+  transform: rotateY(-90deg) translateZ(100px);
+  background: #eee;
+}
+.cube .top {
+  transform: rotateX(90deg) translateZ(100px);
+  background: #eee;
+}
+.cube .bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+  background: #ddd;
+}
+
+.n4 {
+  background-color: #2e3038;
+}
+
+.frame-n4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  background: #2e3038;
+}
+
+#bulb {
+  position: absolute;
+  z-index: 2;
+  top: 134px;
+  left: 162px;
+  fill: #fff35c;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+#bulb:hover {
+  fill: #8c8f99;
+}
+
+#glow {
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  background: #fff35c;
+  border-radius: 50px;
+  box-shadow: 0 0 50px 10px #fff35c;
+  top: 134px;
+  left: 162px;
+  transition: all 0.5s ease-in-out;
+}
+
+#bulb:hover ~ #glow {
+  opacity: 0;
+}
+
+#base {
+  position: absolute;
+  top: 233px;
+  left: 184px;
+  fill: #e5e5e5;
+}
+
+.n5 {
+  background-color: #ffdcb5;
+}
+
+.frame-n5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+}
+
+.pig {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.pig .head {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  background: #f7949a;
+  border-radius: 50%;
+}
+.pig .ear {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: -1;
+  width: 60px;
+  height: 60px;
+  top: -5px;
+  background: #ffb7bc;
+  border: 7px solid #f7949a;
+}
+.pig .ear-l {
+  border-radius: 15px 0 0 0;
+  left: 10px;
+  transform: rotate(-12deg) skewY(27deg);
+}
+.pig .ear-r {
+  border-radius: 0 15px 0 0;
+  right: 10px;
+  transform: rotate(12deg) skewY(-27deg);
+}
+.pig .oeil {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 42%;
+  background: #fff;
+  border-radius: 50%;
+  animation: eyes 4s ease-in-out infinite;
+}
+.pig .oeil:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: #333;
+  border-radius: 50%;
+  top: 9px;
+  left: 9px;
+  animation: pupills 4s ease-in-out infinite;
+}
+.pig .oeil-l {
+  left: 24%;
+}
+.pig .oeil-r {
+  right: 24%;
+}
+.pig .nose {
+  position: absolute;
+  height: 50px;
+  width: 60px;
+  top: 55%;
+  left: 50px;
+  background: #ffb7bc;
+  border-radius: 100px/80px;
+}
+.pig .nostril {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 15px;
+  background: #ce666d;
+  border-radius: 50%;
+}
+.pig .nostril-l {
+  left: 14px;
+}
+.pig .nostril-r {
+  right: 14px;
+}
+
+@keyframes eyes {
+  0%, 23%, 25%, 65%, 67%, 89%, 91%, 100% {
+    transform: scaleY(1);
+  }
+  24%, 66%, 90% {
+    transform: scaleY(0);
+  }
+}
+@keyframes pupills {
+  0%, 23%, 25%, 65%, 67%, 89%, 91%, 100% {
+    transform: scaleY(1);
+  }
+  24%, 66%, 90% {
+    transform: scaleY(2);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
